@@ -1,24 +1,22 @@
 import React from 'react';
+import {connect} from 'react-redux'
+import {fetchHabits} from './actions/fetchHabits'
 
-class App extends React.Component {
+class App extends React.Component {  
   componentDidMount() {
-    fetch('http://localhost:3000/api/habits', { 
-      method: 'GET',
-      headers: {'Content-type': 'application/json', 'Accept': 'application/json'}, 
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))        
-  }
+    this.props.fetchHabits({type: 'FETCH_HABITS', payload: {name: 'Daily Walk'}})
+  } 
+
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          Habit Hause!
-        </header>
+        Habit Hause!
       </div>
     );
   }
 
 }
 
-export default App;
+export default connect(null, {fetchHabits})(App);
+

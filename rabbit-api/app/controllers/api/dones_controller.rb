@@ -13,7 +13,7 @@ class Api::DonesController < ApplicationController
 	end
 	
 	def index
-		@dones = @habit.dones
+		@dones = Done.all
 		render json: @dones
 	end
 	
