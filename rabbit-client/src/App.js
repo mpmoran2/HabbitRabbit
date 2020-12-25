@@ -1,22 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchHabits} from './actions/fetchHabits'
+// import {fetchHabits} from './actions/fetchHabits'
+import HabitsContainer from './containers/HabitsContainer'
 
 class App extends React.Component {  
-  componentDidMount() {
-    this.props.fetchHabits({type: 'FETCH_HABITS', payload: {name: 'Daily Walk'}})
-  } 
-
-
   render() {
     return (
       <div className="App">
-        Habit Hause!
+        <HabitsContainer/>
       </div>
     );
   }
 
 }
 
-export default connect(null, {fetchHabits})(App);
+export default connect()(App);
 

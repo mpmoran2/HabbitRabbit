@@ -6,9 +6,10 @@ import { Provider } from 'react-redux'
 
 import habitReducer from './reducers/habitReducer'
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 
 const composeEnhancers = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose; 
+
 let store = createStore(habitReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
@@ -17,4 +18,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'));
 
-reportWebVitals();
+// reportWebVitals();

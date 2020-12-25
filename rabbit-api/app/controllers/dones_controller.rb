@@ -1,7 +1,7 @@
-class Api::DonesController < ApplicationController
+class DonesController < ApplicationController
     before_action :set_habit
-
 	
+	#C
 	def create 
 		@done = @habit.dones.new(done_params)
 		if @habit.update_streak(@done) != 'There is no Streak going'
@@ -12,16 +12,22 @@ class Api::DonesController < ApplicationController
 		end
 	end
 	
+	#R
 	def index
-		@dones = Done.all
-		render json: @dones
+		render json: Done.all
 	end
 	
 	def show
         @done = @habit.dones.find_by(:id => params[:id])
 		render json: @done
 	end
+	
+	#U
+	def update 
+		
+	end 
 
+	#D
 	# def destroy 
 	# 	@done = @habit.dones.find_by(:id => params[:id])
 	# 	@done.destroy
@@ -30,7 +36,7 @@ class Api::DonesController < ApplicationController
 	private
 
 	def set_habit
-		@habit = Habit.find_by(params[:habit_id])
+		@habit = Habit.find(params[:habit_id])
 	end
 
 	def done_params 

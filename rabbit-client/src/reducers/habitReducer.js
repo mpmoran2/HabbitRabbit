@@ -1,10 +1,8 @@
 export default function habitReducer(state = {habits: []}, action) {
-    
-    return state
-
-    // switch (action.type) {
-    //   case 'FETCH_HABITS':
-    //     return {habits: action.payload}
+    // debugger;
+    switch (action.type) {
+      case 'FETCH_HABITS':
+         return {habits: action.payload}
     //   case 'ADD_HABITS':
     //     return {...state, accounts: [...state.habits, action.payload]}
     //   case 'ADD_DONE':
@@ -34,7 +32,7 @@ export default function habitReducer(state = {habits: []}, action) {
     //       }
     //     })
     //     return {...state, habits: habitsThree}
-    //   default:
-    //     return state
-    // }
+      default:
+        return state
+    }
   }
