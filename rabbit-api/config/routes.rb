@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
-  
-  namespace :api do
-    resources :habits do
-      resources :dones
-    end
-  end 
-
-end
+  resources :habits do
+    resources :dones
+  end
+end 
 
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 # resources :users, only: [:new, :create, :show]

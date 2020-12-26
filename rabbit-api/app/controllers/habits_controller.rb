@@ -11,24 +11,25 @@ class HabitsController < ApplicationController
 
 	#R
 	def index
-		render json: Habit.all
+		# binding.pry\
+		habits = Habit.all
+		render json: habits.to_json(except: [:updated_at, :created_at])
 	end
 
     def show
         render json: Habit.find(params[:id])
 	end
-
+	
 	#U
-
+	
 	#D
 	def destroy 
 		Habit.find_by(:id => params[:id]).destroy
 	end
-
-    private
-
+	
+	private
+	
 	def habit_params 
 		params.require(:habit).permit(:name, :goal, :streak)
 	end
 end
-
