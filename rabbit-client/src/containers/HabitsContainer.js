@@ -11,13 +11,13 @@ class HabitsContainer extends React.Component {
         // fetchHabits()
     }
     display = () => {
-        // debugger
         if(this.props.habits){
+            // debugger
             return(
                 <div>
                   {/* <h3>{this.props.habits[0].name}</h3>
-                  <h3>{this.props.habits[1].name}</h3>
-                  <h3>{this.props.habits[2].name}</h3> */}
+                  <h3>{this.props.habits[1].name}</h3> */}
+                  {/* <h3>{this.props.habits[2].name}</h3> */}
                 </div>
             )
         }
