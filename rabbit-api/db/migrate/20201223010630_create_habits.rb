@@ -4,7 +4,7 @@ class CreateHabits < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :goal
       t.date :start_day
-      t.float :streak
+      t.integer :streak
       t.integer :user_id
 
       t.timestamps

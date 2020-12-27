@@ -11,7 +11,6 @@ class HabitsController < ApplicationController
 
 	#R
 	def index
-		# binding.pry\
 		habits = Habit.all
 		render json: habits.to_json(except: [:updated_at, :created_at])
 	end
@@ -21,6 +20,12 @@ class HabitsController < ApplicationController
 	end
 	
 	#U
+	def update 
+		@habit = Habit.find(params[:id])
+		@habit.update(name: params["habits"]["name"])
+		@habit.save
+		render json: @habit
+	end 
 	
 	#D
 	def destroy 

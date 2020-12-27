@@ -7,15 +7,15 @@ class HabitForm extends React.Component {
 
     state = {name: '', goal: '', start_day: ''}
 
-    handleChange = (event) => {
-        this.setState({ [event.target.name]: event.target.value })
-    }
+    handleChange = (event) => { this.setState({ [event.target.name]: event.target.value }) }
 
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addHabit(this.state)
         this.setState({name: '', goal: '', start_day: ''})
+        window.location.reload(false);
     }
+    
     render() {
         return (
             <div>

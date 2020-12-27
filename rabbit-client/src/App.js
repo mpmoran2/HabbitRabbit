@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-// import {fetchHabits} from './actions/fetchHabits'
+
 import HabitsContainer from './containers/HabitsContainer'
 
 class App extends React.Component {  
