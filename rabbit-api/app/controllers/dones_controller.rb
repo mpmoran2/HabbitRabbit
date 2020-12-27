@@ -14,7 +14,8 @@ class DonesController < ApplicationController
 	
 	#R
 	def index
-		render json: Done.all
+		dones = Done.all
+		render json: dones.to_json(except: [:updated_at, :created_at])
 	end
 	
 	def show

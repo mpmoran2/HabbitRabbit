@@ -10,26 +10,24 @@ class HabitsContainer extends React.Component {
         this.props.fetchHabits()
         // fetchHabits()
     }
-    display = () => {
-        if(this.props.habits){
-            // debugger
-            return(
-                <div>
-                  {/* <h3>{this.props.habits[0].name}</h3>
-                  <h3>{this.props.habits[1].name}</h3> */}
-                  {/* <h3>{this.props.habits[2].name}</h3> */}
-                </div>
-            )
-        }
-        // debugger
-    }
+    // display = () => {
+    //     if(this.props.habits){
+    //         // debugger
+    //         return(
+    //             <div>
+    //               {/* <h3>{this.props.habits[0].name}</h3>
+    //               <h3>{this.props.habits[1].name}</h3> */}
+    //               {/* <h3>{this.props.habits[2].name}</h3> */}
+    //             </div>
+    //         )
+    //     }
+    // }
     render() {
         // debugger
         return (
             <div>
-                {this.display()}
-                <HabitInput/>
-                <Habits/>
+                <HabitInput/><br/>
+                <Habits habits={this.props.habits}/>
             </div>
         )
     }

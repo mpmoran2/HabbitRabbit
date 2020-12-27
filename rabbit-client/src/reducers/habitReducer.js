@@ -2,8 +2,8 @@ export default function habitReducer(state = {habits: []}, action) {
   switch (action.type) {
     case 'FETCH_HABITS':   
       return {habits: action.payload}
-    // case 'ADD_HABITS':
-      // return {...state, accounts: [...state.habits, action.payload]}
+    case 'ADD_HABIT':
+      return {...state, habits: [...state.habits, action.payload]}
     // case 'ADD_DONE':
     //   let habits = state.habits.map(habit => {
     //     if (habit.id === action.payload.id) {

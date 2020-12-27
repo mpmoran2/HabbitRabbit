@@ -24,8 +24,7 @@ ActiveRecord::Schema.define(version: 2020_12_23_010653) do
     t.string "name"
     t.string "goal"
     t.date "start_day"
-    t.integer "streak"
-    t.date "completed_day"
+    t.float "streak"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
