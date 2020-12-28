@@ -8,7 +8,7 @@ class DonesController < ApplicationController
 
 		if @habit.update_streak(@done) != 'There is no Streak going'
 			@done.save
-			render json: @done
+			render json: @habit
 		else
 			render json: {error: 'There is no Streak going'}
 		end
@@ -16,8 +16,8 @@ class DonesController < ApplicationController
 	
 	#R
 	def index
-		dones = Done.all
-		render json: dones.to_json(except: [:updated_at, :created_at])
+		@dones = Done.all
+		render json: @dones#.to_json(except: [:updated_at, :created_at])
 	end
 	
 	def show
@@ -30,7 +30,7 @@ class DonesController < ApplicationController
 		@done = Done.find_by(:id => params[:id])
 		@habit = Habit.find(@done.habit_id)
 
-		if @habit.update_streak_on_delet(@done)
+		if @habit.update_streak_on_delete(@done)
 			@done.destroy
 			render json: @habit
 		else

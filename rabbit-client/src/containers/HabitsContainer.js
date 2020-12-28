@@ -1,10 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import {fetchHabits} from '../actions/fetchHabits';
 
 import Habits from '../components/Habits';
-import HabitInput from '../components/HabitForm'
+import Habit from '../components/Habit';
+import HabitForm from '../components/HabitForm'
 
 class HabitsContainer extends React.Component {
     componentDidMount() {
@@ -13,9 +14,11 @@ class HabitsContainer extends React.Component {
     render() {
         return (
             <div>
-                <Route />
-                <HabitInput/><br/>
-                <Habits habits={this.props.habits}/>
+                <Switch>
+                    <Route path='/habits/new' component={HabitForm}/>
+                    <Route path='/habits/:id' render={(routerProps) => <Habit {...routerProps} habits={this.props.habits}/>}/>             
+                    <Route exact path='/habits' render={(routerProps) => <Habits {...routerProps} habits={this.props.habits}/>}/>      
+                </Switch>            
             </div>
         )
     }

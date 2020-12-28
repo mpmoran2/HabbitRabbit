@@ -12,11 +12,12 @@ class HabitsController < ApplicationController
 	#R
 	def index
 		habits = Habit.all
-		render json: habits.to_json(except: [:updated_at, :created_at])
+		render json: habits#.to_json(except: [:updated_at, :created_at])
 	end
 
-    def show
-        render json: Habit.find(params[:id])
+	def show
+		@habit = Habit.find(params[:id])
+        render json: @habit
 	end
 	
 	#U
@@ -29,7 +30,8 @@ class HabitsController < ApplicationController
 	
 	#D
 	def destroy 
-		Habit.find_by(:id => params[:id]).destroy
+		@habit = Habit.find_by(:id => params[:id])
+		@habit.destroy
 	end
 	
 	private
