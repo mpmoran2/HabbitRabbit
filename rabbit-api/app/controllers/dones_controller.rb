@@ -3,14 +3,12 @@ class DonesController < ApplicationController
 	
 	#C
 	def create 
-		@done = @habit.dones.new(done_params)
-		@done.date = Date.now
-
-		if @habit.update_streak(@done) != 'There is no Streak going'
+		@done = @habit.dones.new(done_params)		
+		if @habit.update_streak(@done) 
 			@done.save
 			render json: @habit
 		else
-			render json: {error: 'There is no Streak going'}
+			render json: {error: 'Cannot Save Carrot'}
 		end
 	end
 	

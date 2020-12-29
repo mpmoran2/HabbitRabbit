@@ -18,7 +18,7 @@ const Habit = (props) => {
             {habit ? null : <Redirect to='/habits'/>}
             <h2>{habit ? habit.name : null}</h2>
                   
-            Carrots Fed: {habit ? habit.streak : null} <br/>
+            Carrots Fed: {habit ? habit.streak : null} 🥕 <br/>
             (To feed your Habit Rabbit more carrots, log your days. For every day you complete your habit, your rabbit gets a carrot!)<br/><br/>
             <DonesContainer habit={habit}/>
         </div>

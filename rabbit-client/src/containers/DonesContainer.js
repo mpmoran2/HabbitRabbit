@@ -9,7 +9,7 @@ class DonesContainer extends React.Component {
         return (
             <div>
                 <DonesForm habit={this.props.habit}/>
-                <Dones dones={this.props.habit && this.props.habit.dones}/>
+                <Dones dones={this.props.habit && this.props.habit.dones}/><br/>
             </div>
         )
     }

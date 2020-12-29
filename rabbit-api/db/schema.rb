@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2020_12_23_010653) do
   create_table "dones", force: :cascade do |t|
     t.date "completed"
     t.string "do_nodo"
+    t.integer "streak_val"
     t.integer "habit_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -24,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_12_23_010653) do
     t.string "name"
     t.string "goal"
     t.date "start_day"
-    t.integer "streak"
+    t.integer "streak", default: 0
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
