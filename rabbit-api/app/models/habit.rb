@@ -1,31 +1,28 @@
 class Habit < ApplicationRecord
-    # belongs_to :user
     has_many :dones
 
-    validates :name, :goal, :start_day, presence: true    
+    validates :name, :rabbit_name, :description, :goal, :start_day, presence: true    
 
     def update_streak(dones)
-        if dones.do_nodo == 'Done'
-            self.streak = self.streak + self.dones.includes('Done').count
-            self.save
-        else dones.do_nodo == 'Not Done'
-            self.streak = self.streak + 0
-            self.save
+        if dones.do_nodo == 'Yes'
+            self.save            
+            self.streak = self.streak + 1
+        else dones.do_nodo == 'Incomplete'
+            self.save            
+            self.streak = 0
         end        
+        self.save
     end 
 
-    def update_streak_on_delete(done)
-        if dones.do_nodo == 'Done'
-            if self.streak >= self.dones.count
-                self.streak = self.streak - self.dones.includes('Done').count
-                self.save
-            else
-                return "There are no Streaks"
-            end
-        elsif dones.do_nodo == 'Not Done'
-            self.streak = self.streak + 0
+    def update_streak_on_delete(dones)
+        if dones.do_nodo == 'Yes'
+            self.streak = self.dones.count - 1
+            self.save 
+        elsif dones.do_nodo == 'Incomplete'
             self.save
-        end
+            self.streak = self.dones.count - 1
+        end        
+        self.save
     end
     
 end

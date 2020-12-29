@@ -16,13 +16,13 @@ class DonesForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="logNav">
                 <form onSubmit={this.handleSubmit}>
                     <label>Log your Habit:</label>
                     <select name="do_nodo" value={this.state.do_nodo} onChange={this.handleChange}>
                         <option>Please Select One</option>
-                        <option>Done</option>
-                        <option>Not Done</option>
+                        <option>Yes</option>
+                        <option>Incomplete</option>
                     </select><br/>                    
                     <label>Day Done:</label>
                     <input type="date" name="completed" value={this.state.completed} onChange={this.handleChange}/><br/>      

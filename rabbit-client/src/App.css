@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+    background-color: rgba(248, 215, 242, 0.658);
+}
+
+.bunForm {
+    margin-top: 10px;
+    text-align: center;    
+    background-color: rgba(248, 215, 242, 0.658);    
+    border: solid pink
+}
+

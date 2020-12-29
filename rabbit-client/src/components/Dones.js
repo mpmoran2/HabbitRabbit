@@ -1,17 +1,23 @@
 import React from 'react'
 import {connect} from 'react-redux'
-// import {Link} from 'react-router-dom'
+
 
 import {deleteDone} from '../actions/deleteDone'
-const Dones = (props) => {
-    
+
+
+class Dones extends React.Component {
+    state = {}
+
+    handleDelete = (done) => {this.props.deleteDone(done.id, done.habit_id)}
+    render() {
     return (
-        <div>
-            Carrots 🥕 
-            {props.dones && props.dones.map(done => <li key={done.id}>{done.completed} - {done.do_nodo} </li>)}
+        <div className="log">
+            <h4 className="logTitle">🥕 Log  🥕</h4>
+            {this.props.dones && this.props.dones.map(done => <li key={done.id}>{done.completed} - {done.do_nodo} <button onClick={() => this.handleDelete(done)}>Delete</button></li>)}
             
         </div>
     )
+    }
 }
 
 

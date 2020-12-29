@@ -6,8 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Habit.create(name: 'Daily Walk', goal: '31 days', start_day: "2020-12-21")
-Habit.create(name: '30min Journaling', goal: '18 days', start_day: "2020-12-01")
-Done.create(completed: "2020-12-21", do_nodo: 'Done', streak_val: 1, habit_id: 1)
-Done.create(completed: "2020-12-22", do_nodo: 'Not Done', streak_val: 0, habit_id: 1)
-Done.create(completed: "2020-12-23", do_nodo: 'Done', streak_val: 1, habit_id: 1)
+Habit.create(name: 'Daily Walk', rabbit_name: 'Vo', description: "Talk a walk for 30min", goal:31, start_day: "2020-12-21")
+Habit.create(name: 'Journaling', rabbit_name: 'Amy', description: "Sit and journal for 30 min", goal: 18, start_day: "2020-12-01")

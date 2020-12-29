@@ -7,6 +7,6 @@ export const addHabit = (data) => {
         })
         .then(response => response.json())   
         .then(habit => dispatch({type: 'ADD_HABIT', payload: habit}))
-        alert("A Rabbit has moved in to take care of your habit!🐰")        
+        alert("A Rabbit has moved in to take care of your habit.🐰 Go to Habits to check it out!")        
     }
 } 

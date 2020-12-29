@@ -3,7 +3,6 @@ class CreateDones < ActiveRecord::Migration[6.0]
     create_table :dones do |t|
       t.date :completed
       t.string :do_nodo
-      t.integer :streak_val
       t.integer :habit_id
       
       t.timestamps

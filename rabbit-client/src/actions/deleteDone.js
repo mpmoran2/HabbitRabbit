@@ -1,6 +1,6 @@
 export const deleteDone = (doneId, habitId) => {
     return (dispatch) => {
-      return fetch(`http://localhost:3000/habits/${habitId}/habits/${doneId}`, {
+      return fetch(`http://localhost:3000/habits/${habitId}/dones/${doneId}`, {
         method: 'DELETE'
       })
       .then(response => response.json())

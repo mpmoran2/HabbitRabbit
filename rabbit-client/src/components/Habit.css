@@ -1,0 +1,49 @@
+.theHabit {
+    text-align: center;
+    background-color: rgba(248, 215, 242, 0.658);
+}
+
+.theGoal {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    
+}
+
+.log {
+    text-align: center;  
+    padding-bottom: 10px;      
+    
+}
+
+
+
+
+form {
+    text-align: center;
+}
+
+.logNav {
+    background-color:  rgba(248, 215, 242, 0.658);  
+}
+.sidenav {
+    padding-top: 25px;
+    height: 800px;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 1;
+    left: 1;
+    background-color:  rgba(248, 215, 242, 0.658);
+    color: rgb(0, 0, 0);
+    overflow-x: hidden;
+}    
+
+
+  

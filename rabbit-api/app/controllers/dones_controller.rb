@@ -4,6 +4,7 @@ class DonesController < ApplicationController
 	#C
 	def create 
 		@done = @habit.dones.new(done_params)		
+		# binding.pry
 		if @habit.update_streak(@done) 
 			@done.save
 			render json: @habit
@@ -25,9 +26,8 @@ class DonesController < ApplicationController
 	
 	#D
 	def destroy 
-		@done = Done.find_by(:id => params[:id])
+		@done = Done.find(params[:id])
 		@habit = Habit.find(@done.habit_id)
-
 		if @habit.update_streak_on_delete(@done)
 			@done.destroy
 			render json: @habit

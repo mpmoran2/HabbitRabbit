@@ -1,13 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-// import Habit from './Habit'
+
+import './Habits.css'
 const Habits = (props) => {  
     return (
         <div>
+            <h1>Habits</h1>
             <ul>
-            Habit Rabbits 
-                {props.habits.map(habit => <li key={habit.id}><Link to={`/habits/${habit.id}`}>{habit.name}</Link></li>)}    
+            {props.habits.map(habit => <p className="habitList" key={habit.id}>✨<Link to={`/habits/${habit.id}`}>{habit.name}</Link>✨</p>)}    
             </ul>
+            
         </div>
     )
 }

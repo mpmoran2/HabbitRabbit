@@ -10,6 +10,7 @@ export const editHabit = (data) => {
       })
       .then(response => response.json())
       .then(habit => dispatch({type: 'EDIT_HABIT', payload: habit}))
+      alert("Your Rabbit has made your requested changed!")
     }
   
   }

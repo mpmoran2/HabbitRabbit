@@ -23,7 +23,7 @@ class HabitsController < ApplicationController
 	#U
 	def update 
 		@habit = Habit.find(params[:id])
-		@habit.update(name: params["habits"]["name"])
+		@habit.update(habit_params)
 		@habit.save
 		render json: @habit
 	end 
@@ -37,6 +37,6 @@ class HabitsController < ApplicationController
 	private
 	
 	def habit_params 
-		params.require(:habit).permit(:name, :goal, :start_day)
+		params.require(:habit).permit(:name, :rabbit_name, :description, :goal, :start_day)
 	end
 end
