@@ -9,8 +9,7 @@ const Habit = (props) => {
 
     console.log(props)
     // eslint-disable-next-line
-    let habit = props.habits.filter(habit => habit.id == props.match.params.id)[0]
-    
+    let habit = props.habits.filter(habit => habit.id == props.match.params.id)[0]    
    
     console.log(habit)
     

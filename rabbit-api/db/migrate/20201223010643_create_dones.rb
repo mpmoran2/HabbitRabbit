@@ -5,6 +5,7 @@ class CreateDones < ActiveRecord::Migration[6.0]
       t.string :do_nodo
       t.integer :habit_id
       
+      
       t.timestamps
     end
   end

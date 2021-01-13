@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_23_010653) do
+ActiveRecord::Schema.define(version: 2020_12_23_010643) do
 
   create_table "dones", force: :cascade do |t|
     t.date "completed"
@@ -28,13 +28,6 @@ ActiveRecord::Schema.define(version: 2020_12_23_010653) do
     t.date "start_day"
     t.integer "streak", default: 0
     t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

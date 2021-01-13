@@ -1,5 +1,4 @@
-export function fetchHabits() {    
-       
+export function fetchHabits() {           
     console.log('Get Them Rabbits!') 
      return(dispatch) => {
         fetch('http://localhost:3000/habits') 

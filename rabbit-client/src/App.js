@@ -10,7 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Habbit 🐰 Hause</h1>
+        <h1>Rabbit 🐰 Hause</h1>
         <Navbar/>
         <HabitsContainer/>           
       </div>   

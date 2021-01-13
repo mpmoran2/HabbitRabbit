@@ -16,8 +16,7 @@ class HabitsContainer extends React.Component {
     }
     render() {
         return (
-            <div>
-                
+            <div>                
                 <Switch>
                     <Route path='/about' component={About}/>
                     <Route path='/habits/new' component={HabitForm}/>

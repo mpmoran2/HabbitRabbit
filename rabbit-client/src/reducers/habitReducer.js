@@ -14,7 +14,7 @@ export default function habitReducer(state = {habits: []}, action) {
       })
       return {...state, habits: habits}
     case 'DELETE_DONE':
-            let habitsTwo = state.habits.map(habit => {
+        let habitsTwo = state.habits.map(habit => {
         if (habit.id === action.payload.id) {
           return action.payload
         } else {

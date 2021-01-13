@@ -37,3 +37,4 @@ class HabitEdit extends React.Component {
 }
 
 export default connect(null, {editHabit})(HabitEdit)
+

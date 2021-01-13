@@ -3,5 +3,8 @@ class Done < ApplicationRecord
     
     validates :do_nodo, presence: true
     validates_inclusion_of :do_nodo, :in => ['Yes', 'Incomplete']
+
+    
+        
 end
 

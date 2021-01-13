@@ -4,8 +4,9 @@ import './NavBar.css'
 const NavBar = (props) => {
 
   return (
-    <nav className="navBar">      
-      <ul className="linky">        
+    <nav className="navBar">        
+      <ul className="linky">  
+  
         <li className="lil"><Link className="boop"to='/habits/new'>Add Habits</Link></li>
         <li className="lil"><Link className="boop" to='/habits'>Habits</Link></li>
         <li className="lil"><Link className="boop" to='/habitrabbits'>Habit Rabbits</Link></li>

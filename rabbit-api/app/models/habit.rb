@@ -25,5 +25,6 @@ class Habit < ApplicationRecord
         self.save
     end
     
+     
 end
 
