@@ -11,6 +11,8 @@ const NavBar = (props) => {
         <li className="lil"><Link className="boop" to='/habits'>Habits</Link></li>
         <li className="lil"><Link className="boop" to='/habitrabbits'>Habit Rabbits</Link></li>
         <li className="lil"><Link className="boop"to='/about'>About</Link></li>
+        {/* login and log out show depending on session */}
+        {/* my profile */}
       </ul>
     </nav>
   )
